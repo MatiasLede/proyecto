@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <!--Acá estamos dentro del header-->
+
+        <img src="logo.png" alt="logo e-commerce peluquería" width="200" height="200">
+        <h1>Hola mundo</h1>
+    </header>
+
+    <nav>
+        <!--Acá estamos dentro del nav-->
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#reseñas">Reseñas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!--Acá estamos dentro del main-->
+        
+        <section>
+            <h2 id="inicio">Inicio</h2>
+            <img src="fotosection.jpg" alt="hojas de otoño" height="400" width="600">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, id totam? Praesentium neque sequi temporibus iusto natus deserunt nisi quo iure atque ipsum, est, culpa nobis voluptatum consequatur illo corporis consectetur rerum. Dolores eaque facere accusamus temporibus tenetur, reprehenderit eum optio adipisci cupiditate rem veniam. Unde velit fugit expedita. Sunt labore repellat nulla tempora soluta unde possimus libero dolore velit, vel aperiam perspiciatis quidem eius vitae, odit, quibusdam laudantium nobis mollitia at beatae voluptate error culpa. Cumque itaque explicabo quia, commodi esse tempore quaerat consequuntur laborum nulla veritatis blanditiis at facere quibusdam culpa placeat a, hic doloribus cupiditate ab. Eveniet aut eligendi laborum ullam voluptate vitae expedita sapiente. Veniam a unde quidem rerum sunt libero perferendis vero asperiores provident tempora tenetur amet possimus est necessitatibus excepturi sit nihil iusto corrupti, officiis natus. Dicta tempore corrupti ab accusamus voluptatibus dolorum voluptatem facere fugit aperiam nulla, similique, quaerat magnam cupiditate architecto voluptate!</p>
+            <br>
+        </section>
+        
+        <section>
+            <h2  id="productos">Productos</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, id totam? Praesentium neque sequi temporibus iusto natus deserunt nisi quo iure atque ipsum, est, culpa nobis voluptatum consequatur illo corporis consectetur rerum. Dolores eaque facere accusamus temporibus tenetur, reprehenderit eum optio adipisci cupiditate rem veniam. Unde velit fugit expedita. Sunt labore repellat nulla tempora soluta unde possimus libero dolore velit, vel aperiam perspiciatis quidem eius vitae, odit, quibusdam laudantium nobis mollitia at beatae voluptate error culpa. Cumque itaque explicabo quia, commodi esse tempore quaerat consequuntur laborum nulla veritatis blanditiis at facere quibusdam culpa placeat a, hic doloribus cupiditate ab. Eveniet aut eligendi laborum ullam voluptate vitae expedita sapiente. Veniam a unde quidem rerum sunt libero perferendis vero asperiores provident tempora tenetur amet possimus est necessitatibus excepturi sit nihil iusto corrupti, officiis natus. Dicta tempore corrupti ab accusamus voluptatibus dolorum voluptatem facere fugit aperiam nulla, similique, quaerat magnam cupiditate architecto voluptate!</p>
+            <br>
+        </section>
+        
+        <section>
+            <h2 id="reseñas">Reseñas</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, id totam? Praesentium neque sequi temporibus iusto natus deserunt nisi quo iure atque ipsum, est, culpa nobis voluptatum consequatur illo corporis consectetur rerum. Dolores eaque facere accusamus temporibus tenetur, reprehenderit eum optio adipisci cupiditate rem veniam. Unde velit fugit expedita. Sunt labore repellat nulla tempora soluta unde possimus libero dolore velit, vel aperiam perspiciatis quidem eius vitae, odit, quibusdam laudantium nobis mollitia at beatae voluptate error culpa. Cumque itaque explicabo quia, commodi esse tempore quaerat consequuntur laborum nulla veritatis blanditiis at facere quibusdam culpa placeat a, hic doloribus cupiditate ab. Eveniet aut eligendi laborum ullam voluptate vitae expedita sapiente. Veniam a unde quidem rerum sunt libero perferendis vero asperiores provident tempora tenetur amet possimus est necessitatibus excepturi sit nihil iusto corrupti, officiis natus. Dicta tempore corrupti ab accusamus voluptatibus dolorum voluptatem facere fugit aperiam nulla, similique, quaerat magnam cupiditate architecto voluptate!</p>
+            <br>
+        </section>
+<!--Dentro de la sección <main>:
+Creá un formulario de contacto utilizando Formspree con campos 
+de nombre, correo electrónico y mensaje. -->
+        <section>
+            <h2 id="contacto">Formulario de contacto</h2>
+            <form action="https://formspree.io/f/mjkvbyqp" method="POST">
+                <fieldset>
+                    <legend><b>Completá con tus datos y enviá tu consulta</b></legend> 
+                    <br>
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="30">
+                    <br>
+                    <br>
+
+                    <label for="apellido">Apellido: </label>
+                    <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="30">
+                    <br>
+                    <br>
+
+                    <label for="email">e-mail: </label>
+                    <input type="email" id="email" name="email"  placeholder="ej: marioe22@gmail.com" required>
+                    <br>
+                    <br>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" cols="50" placeholder="¿Cuál es tu consulta?" required></textarea>
+                    <br>
+                    <br>
+
+                    <input type="submit">
+                </fieldset>
+
+
+            </form>
+            <br>
+        </section>
+            
+    </main>
+
+    <footer>
+        <!--Acá estamos dentro del footer-->
+    </footer>
+</body>
+</html>
