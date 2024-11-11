@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MKC Muebles De Cocina</title>
+
+    <!--Fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!--Iconos-->
+    <script src="https://kit.fontawesome.com/7c540d6aa0.js" crossorigin="anonymous"></script>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <!--Mi hoja de estilo css-->
+    <link rel="stylesheet" href="diseño.css">
+</head>
+<body>
+    <header>
+        <img id="logo" src="imagenes/logo.png" alt="logo e-commerce muebles de cocina" width="150" height="150">
+        <div class="sub-header">
+            <h1>Tienda de Venta de Muebles de Cocina</h1>
+            <br>
+            <p>Descubrí nuestra exclusiva colección de muebles de cocina. Contamos con una variedad de diseños únicos que se adaptan a los estilos más buscados y a las características específicas de tu espacio. ¡Transformá tu cocina en un lugar especial con nuestros muebles de alta calidad!</p>
+        </div>
+
+    </header>
+    <nav>
+        <!--Acá estamos dentro del nav-->
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos">Productos</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2 id="contacto"> Contactanos</h2>
+            <p>Por favor, completá este formulario con la información requerida y responderemos a la brevedad a tu casilla de correo electrónico.</p>
+            <form action="https://formspree.io/f/xanyozdl" method="POST">
+                <fieldset>
+                    <label for="nombre">Nombre:</label>
+                    <input name="nombre"type="text" required maxlength="20" minlength="3">
+                    <label for="email">e-mail:</label>
+                    <input name="email" type="email" placeholder="ejemplo@gmail.com"required>
+                    <label name="mensaje">Mensaje:</label> 
+                    <textarea name="mensaje" rows="5" cols="50" placeholder="Escribí tu mensaje aquí"required></textarea>
+                    <input type="submit" value="Enviar" class="enviar">
+                </fieldset>
+            </form>
+        </section>  
+    </main>
+    
+    <footer>
+        <!--Acá estamos dentro del footer-->
+        <div class="sub-footer">
+            <div class="redes">
+                <h3>Nuestras Redes</h3>
+                <p><i class="fa-brands fa-instagram" style="color: #FFD43B;"></i> Instagram</p>
+                <p><i class="fa-brands fa-facebook" style="color: #FFD43B;"></i></i> Facebook</p>
+                <p><i class="fa-brands fa-whatsapp" style="color: #FFD43B;"></i> (011) 5567 6755</p>
+            </div>
+
+            <div class="dondeestamos">
+                <h3>¿Dónde estamos?</h3>
+                <p id="direccion">Rincón 2028. Valentín Alsina</p>
+                <p><i class="fa-solid fa-clock" style="color: #FFD43B;"></i> Lunes a Viernes de 9 hs a 19 hs</p>
+                <p><i class="fa-solid fa-clock" style="color: #FFD43B;"></i> Sábados de 9 hs a 13 hs</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.1872768683365!2d-58.42896062586137!3d-34.67522260142895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccc7be838eb73%3A0xa1c65d1cf3a6c7bd!2sRinc%C3%B3n%202028%2C%20B1826CCB%20Valent%C3%ADn%20Alsina%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1728251524258!5m2!1ses!2sar" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>">
+            </div>
+            <p id="derechosreservados">MKC Muebles De Cocina</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
+    
+

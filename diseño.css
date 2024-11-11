@@ -1,0 +1,296 @@
+/* --------------------------------- */ 
+/* --------------------------------- */ 
+/* DISEÑO PARA TOODAS LAS PAGINAS */ 
+/* --------------------------------- */ 
+/* --------------------------------- */ 
+*{
+    margin:0; /*preestablecemos margen y relleno en cero para comenzar*/
+    padding:0;
+    box-sizing: border-box;/*ancho y alto de los elementos incluirán el padding y el borde, no se añadorán aparte*/
+}
+
+body{ 
+    font-family: "Ubuntu", sans-serif; /*aplicamos fuente importada para parrafos, etc y ponemos como opcion alternativa una sans serif*/
+    display:flex;/*activamos flexbox en el body para sus elementos hijos*/
+    flex-direction:column; /*los elementos hijos se alinean en columnas*/ 
+    background-color: #a43e22; 
+    color: #d1b9b9; 
+    overflow-x: hidden; /*aseguramos que no se haga barra de desplazamiento horizontal porque esta propiedad oculta elementos que no entren en el contenedor. Como el contenedor es el ancho de la ventana del navehador (esto es el body), se refiere a eso. Luego se complementa con los media query*/
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family:"Playfair Display", serif; /*aplicamos fuente importada para titulos y ponemos como opcion alternativa una serif*/
+    color:bisque;
+}
+
+/* --------------------------------- */ 
+/* HEADER*/ 
+/* --------------------------------- */ 
+header { 
+    display: flex; 
+    align-items: center; /* Centra verticalmente el contenido porque refiere al eje secundario (el eje horizontal es el eje principal por defecto)*/ 
+    background-color: #000000; 
+    padding: 2px 0 20px 0; /*agrega 2px arriba, 0 a la izquierda, 20 abajo y 0 a la derecha*/
+    width:100%; /*que ocupe el 100% del ancho de su contenedor (body)*/
+    box-sizing:border-box;
+} 
+#logo{
+   margin-right: 15px; /*15px de margen derecho para el logo, para que no choque con el div*/
+}
+.sub-header {
+    display: flex; 
+    flex-direction: column; /* Alinea h1 y p verticalmente */ 
+    /*justify-content: center; Al comienzo lo escribí así pero al establecer un padding para todo el header me parece que esta propiedad en center no cambia nada de la disposición de los elementos si le doy el valor center*/
+    align-items: flex-start;/*alineamos explicitamente los elementos h1 y p a la izqiuerda para evitar cambios futuros no deseados. Queremos que estén siempre en esa direccion*/
+}
+
+/* --------------------------------- */ 
+/* NAV */ 
+/* --------------------------------- */ 
+nav{
+    width:100%; /*el nav ocupa el 100% del ancho*/
+    margin:0;
+}
+nav ul { 
+    list-style-type: none; /* Quitamos los puntos de las listas */ 
+    background-color: #472025;
+    padding: 10px;  
+    margin-top: 2px;/*lo separamos un poquito de la parte de arriba del nav, me pareción mejor esteticamente*/
+    border:5px solid #d1b9b9; /*la lista tendrá un borde de 5px, de estilo solida y con color claro*/
+    display: flex; /* Alinea los elementos horizontalmente */ 
+    justify-content: space-around; /* Habrá un espacio uniforme entre los items de la lista y el espacio del borde izquiero y del derecho con el primer y último ítem será de la mitad del que hay entre cada ítem */ 
+} 
+nav ul li { 
+    margin: 0; /* Espacio entre los items contenedores de links (a)*/ 
+    padding: 5px 0; /*le damos mayor altura al contenedor li (con respecto al link) para que el efecto de hover sobre el link no quede pegado al borde de la lista, que haya un espacio arriba y abajo. Por eso sumamos ese padding mejorando la apariencia visual*/
+} 
+nav ul li a { 
+    color: #FFFFFF; 
+    text-decoration: none; /*le sacamos el subrayado al link*/
+    padding: 10px 30px; /*Le damos un area clickeable mayor hacia arriba-abajo y más hacia los costados. Por lo estético tmb me pareció mejor*/
+    font-weight:bold; /*letra negrita de los links*/
+} 
+nav ul li a:hover { 
+    border:2px solid #a43e22;
+    background-color: #713a41;
+    text-decoration:none;
+    color: #FFFFFF;
+}
+
+/* --------------------------------- */ 
+/* MAIN */ 
+/* --------------------------------- */ 
+main section h2{
+    text-align:center;
+    margin: 20px;
+    padding:20px;
+}
+.carousel-inner{
+    width:70%; /*Que todo el carrusel ocupe el 70% del ancho de su contenedor*/
+    margin:auto; /*y que se centre dentro de ese espacio (horizontalmente)*/ 
+    margin-top: 20px; /*separamos al carrusel del elemento de arriba*/
+    margin-bottom:20px; /*separamos al carrusel del elemtno de abajo*/
+    border-radius: 15px; /*hacemos redonditos los bordes*/  
+}
+.carousel.item{ /*establecemos las siguientes propiedades para cada div deslizable del carrusel*/
+    width:100%;
+    height:auto;
+}
+/* --------------------------------- */ 
+/* FOOTER */ 
+/* --------------------------------- */ 
+footer{
+    background-color: #000000;
+    text-align:center; /*Todo el texto centrado*/
+    width:100%; /*Ocupamos todo el ancho*/
+    padding:20px; /*cada elmento del footer tendrá ese padding*/
+    margin-top: 30px; /*separamos un poco al footer del main*/
+}
+.sub-footer{
+    display:flex;
+    flex-direction: column; /*los dos divs (.redes y .dondeestamos) se ordenan en columnas*/
+    align-items:center;/*centramos los dos divs y el p de derechos reservados en el eje horizontal*/ 
+}
+.redes, .dondeestamos{
+   width:100%;
+   margin-top:30px;/*separamos los dos divs uno del otro*/ 
+   box-sizing:border-box;
+}
+footer h3, footer p{
+    margin:10px;
+}
+footer .redes p:hover{
+    color:aqua;
+    cursor:pointer;/*que aparezca la manito al pasar con el mouse*/
+}
+
+/* --------------------------------- */ 
+/* --------------------------------- */ 
+/* PRODUCTOS */ 
+/* --------------------------------- */ 
+/* --------------------------------- */ 
+.marco{
+    width:80%; /*el section que contiene al h2 "Productos" y a cada card ocupa un ancho del 80%*/
+    margin: auto; /*centramos horizontalmente al section*/
+    text-align:center; /*centramos el texto y las cards dentro del section. Podemos hacerlo con ellas tmb como cuerpo entero y no solo su texto porque son inline-block*/ 
+}
+
+.card1, .card2, .card3, .card4, .card5{
+    display:inline-block; /*las cards se van a comportar como inline y tmabién como block, por eso se van a colocar una al lado de otra, se pueden centrar con text align, pueden cambiar sus tamaños con width y height*/
+    background-color: rgba(0, 0, 0, 0.698);/*el color de fondo tiene transparencia*/
+    border:1px solid #ddd;
+    border-radius: 15px;/*borde redondo*/
+    overflow:hidden;/*hacemos invisible lo que sobra por fuera de los bordes redondeados*/
+    box-shadow:0 15px 20px rgb(246, 12, 12);/*sombra de color*/
+    transition:0.3s;/*transición suave para los cambios de estilo*/
+    margin:20px;/*separamos un poquito las cards unas de otras*/
+    height: 470px;/*les damos una altura fija a las cards*/
+}
+
+.card1:hover{/*Efecto hover: cada vez que pasamos mouse sobre las tarjetas cambiamos color de fondo, color de sombra y aumentamos un poquito su tamaño*/
+    background-color:  rgba(33, 8, 97, 0.992);
+    box-shadow:0 15px 20px #dcf71196;
+    transform:scale(1.04);
+}
+.card2:hover{
+    background-color: rgba(99, 12, 12, 0.992);
+    box-shadow:0 15px 20px #dcf71196;
+    transform:scale(1.04);
+}
+.card3:hover{
+    background-color: rgba(12, 99, 35, 0.992);
+    box-shadow:0 15px 20px #dcf71196;
+    transform:scale(1.04);
+}
+.card4:hover{
+    background-color: rgba(82, 12, 99, 0.992);
+    box-shadow:0 15px 20px #dcf71196;
+    transform:scale(1.04);
+}
+.card5:hover{
+    background-color: rgba(123, 78, 18, 0.992);
+    box-shadow:0 15px 20px #dcf71196;
+    transform:scale(1.04);
+}
+
+
+/* --------------------------------- */ 
+/* --------------------------------- */ 
+/* RESEÑAS */ 
+/* --------------------------------- */ 
+/* --------------------------------- */ 
+.seccionResenias{
+    width:80%;/*ocupamos con esta section el 80% del contenedor*/
+    margin: auto;/*centramos la section*/
+}
+.caja{
+    display:grid;/*el div "caja" que contiene cada reseña será una cuadrícula de cssgrid. Cada reseña o elemento hijo se organizará en filas y columnas*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));/*creamos columnas flexibles. el parametro auto-fit ajusta el nro de columnas segun espacio disponible, si es necesario las columnas se estiran. El ancho mínimo de c/columna es 250px y le pedimos que si sobra espacio en el contenedor que divida ese espacio sobrante según el nro de columnas y asigne a c/una en forma proporcional una fracción de ese espacio sobrante, estirando el amcho de cada columna para cubrir todo el espacio*/ 
+    gap:20px; /*espacio entre cada elemetno de la grid*/
+    margin:20px 0;/*ponemos un poquito de margen para arriba y para abjo de cada reseña*/
+}
+.resenia{
+    border-radius: 20px;/*borde redondito en cada reseña*/
+    background-color:rgba(17, 61, 29, 0.992);
+    padding: 10px;
+    box-shadow:0 8px 10px rgb(81, 215, 233);
+    display:flex; /*usamos flexbox para organizar el contenido interno de cada reseña*/
+    flex-direction: column; /*será en una columna*/
+}
+.estrellitas{
+    display:flex;/*recordamos que flex direction es horizontal por defecto*/
+    margin-top:auto;/*empujamos las estrellas hacia abajo*/
+    justify-content:center;/*centramos las estrellas horizontalmente*/
+}
+
+/* --------------------------------- */ 
+/* --------------------------------- */ 
+/* CONTACTO */ 
+/* --------------------------------- */ 
+/* --------------------------------- */ 
+main h2, main p{ /*centramos y damos margen a titulo y parrafo*/
+    text-align: center;
+    margin-left: 10px;
+    margin-right:10px;
+}
+form{
+    width:80%;/*el formulario ocupa el 80% de su contenedor*/
+    display:flex;
+    flex-direction:column;/*los elementos se organizan en una columna*/
+    margin: 0 auto;/*centramos el form horizontalemente*/
+}
+fieldset{
+    width:70%;/*el fieldset ocupa el 70% del form*/
+    border:2px solid #f5c132;
+    display:flex;
+    flex-direction: column;/*su contenido se organiza dentor de una columna*/
+    align-items:center;/*centramos sus elementos horizontalmente*/
+    margin:0 auto 100px;/*centramso el cuerpo entero del fieldset horizontalmente y le agregamos bastante margen en la parte de abajo para sepatrar del footer*/
+    gap:10px;/*espacio de 10px entre los elementos del fieldset(gap tmb funciona con flexbox)*/ 
+}
+form label{
+    margin: 10px;/*algo de margen a los labels para que se separen de otros elementos, como el borde del fieldset*/
+    text-align: left;/*los ponemos a la izquierda*/
+    width:80%;/*y ocupando un 80% del fieldset*/
+}
+fieldset input, fieldset textarea{
+    border-radius:7px; /*hacemos redonditos los inputs*/
+    border:2px solid #f5c132;
+    background-color: #f9c7b9 ;
+    margin:0 auto;/*centramos los inputs horizontalmente*/
+    width:80%;/*les decimos que, igual que sus labels, ocupen un 80% del fieldset*/
+    padding:5px;/*les ponemos un rellenito interno para que quede mejor estéticamente el texto que escribe el usuario dentro de ellos, no tan pegado a los bordes*/  
+}
+fieldset .enviar{
+    background-color: #472025;
+    color: #f9c7b9 ;
+    padding:10px 30px;/*estiramos un poco el boton hacia los costados y un poco menos hacia arriba-abajo*/
+    cursor:pointer;/*se pone la manito cuando pasamos mouse por encima*/    
+    margin:30px auto;/*30px para separar arriba-abajo y lo centramos horizontalmente*/
+}
+fieldset .enviar:hover{
+    background-color:#f9c7b9;
+    color: black;
+    border-style:outset;/*efecto de boton con volumen al pasar el mouse sobre él*/
+}
+
+/* --------------------------------- */ 
+/* --------------------------------- */ 
+/* MEDIA QUERY */ 
+/* --------------------------------- */ 
+/* --------------------------------- */ 
+
+/* --------------------------------- */ 
+/* MEDIA QUERY NAV */ 
+/* --------------------------------- */ 
+@media (max-width: 768px) {/*para ancho que vaya hasta los 768px, osea hasta algunos de los dispositivos medianos*/
+    nav { 
+        flex-direction: column; 
+        align-items: flex-start; 
+        width: 100%;
+    } 
+    nav ul {
+        display: flex; 
+        flex-direction: column; 
+        align-items:center;
+    }
+    nav ul li { 
+        display:block;
+        text-align: center; 
+        margin: 10px 0; 
+    } 
+    #logo{
+        align-self: flex-start;
+     }
+}
+/* --------------------------------- */ 
+/* MEDIA QUERY CONTACTO */ 
+/* --------------------------------- */ 
+@media (max-width: 768px) {
+    form{
+        width:100%;
+    }
+    fieldset{
+        width:80%;
+    }
+}
