@@ -173,6 +173,95 @@ footer .redes p:hover{
     transform:scale(1.04);
 }
 
+/* --------------------------------- */ 
+/* --------------------------------- */ 
+/* PRODUCTOS DE LA API */ 
+/* --------------------------------- */ 
+/* --------------------------------- */ 
+#marco{
+    width:90%; 
+    margin: auto; /*centramos horizontalmente al section*/
+    text-align:center; /*centramos el texto y las cards dentro del section. Podemos hacerlo con ellas tmb como cuerpo entero y no solo su texto porque son inline-block*/ 
+}
+#productos-container { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; /* Espacio entre las cards */ 
+    justify-content: center; /* Centra las cards */ 
+    padding: 10px; /* Añade un padding para evitar que las cards se salgan del contenedor */ 
+}
+
+.card { 
+    display:inline-block; /*las cards se van a comportar como inline y tmabién como block, por eso se van a colocar una al lado de otra, se pueden centrar con text align, pueden cambiar sus tamaños con width y height*/
+    background-color: rgba(0, 0, 0, 0.446);/*el color de fondo tiene transparencia*/
+    border:1px solid #ddd;
+    margin: 10px;
+    border-radius: 15px;/*borde redondo*/
+    overflow:hidden;/*hacemos invisible lo que sobra por fuera de los bordes redondeados*/
+    box-shadow:0 15px 20px rgb(246, 12, 12);/*sombra de color*/
+    transition:0.3s;/*transición suave para los cambios de estilo*/
+    margin:20px;/*separamos un poquito las cards unas de otras*/
+    height: 100%;/*les damos una altura fija a las cards*/
+    width: calc(33.333% - 40px); /*Ajusta el ancho para que entren tres en una fila */
+}
+
+
+
+/* Estilos para la tabla */ 
+.table-container { 
+    display: flex; 
+    justify-content: center; /* Centra la tabla horizontalmente */ 
+    width: 100%; 
+    
+} 
+
+.table { 
+    width: 90%; /* Ajusta el ancho de la tabla al 90% de la pantalla */
+    margin-top: 20px; 
+    background-color: #2e4d3a;
+    color:#f5c132;
+   
+} 
+
+.table th, .table td { 
+    border: 1px solid #ddd; 
+    padding: 8px; 
+    text-align: center; 
+} 
+
+.table th { 
+    background-color: #333; /* Encabezados gris oscuro */ 
+    color: #ddd; /* Texto claro */
+}
+
+/* Estilos para el total y el botón */ 
+.total { 
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center; 
+    margin-top: 20px; 
+} 
+.total h4 { 
+    margin-right: 20px; 
+} 
+.finalizar-compra { 
+    display: flex; 
+    justify-content: flex-end; 
+    margin-top: 10px; 
+    margin-right:10px;
+}
+.btn-primary { 
+    background-color: #173a5f; /* Botón azul oscuro */
+    border: none; 
+    padding: 10px 20px; 
+    color: white; 
+    cursor: pointer; 
+    border-radius: 10px; 
+} 
+.btn-primary:hover { 
+    background-color: #0056b3; 
+}
+
 
 /* --------------------------------- */ 
 /* --------------------------------- */ 

@@ -32,28 +32,20 @@
         <!--Acá estamos dentro del nav-->
         <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="productos">Productos</a></li>
+            <li><a href="productos.html">Productos</a></li>
             <li><a href="carrito.html">Carrito</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
 
     <main>
-        <section>
-            <h2 id="contacto"> Contactanos</h2>
-            <p>Por favor, completá este formulario con la información requerida y responderemos a la brevedad a tu casilla de correo electrónico.</p>
-            <form id="contact-form" action="https://formspree.io/f/xanyozdl" method="POST">
-                <fieldset>
-                    <label for="nombre">Nombre:</label>
-                    <input name="nombre"type="text" required maxlength="20" minlength="3">
-                    <label for="email">e-mail:</label>
-                    <input name="email" type="email" placeholder="ejemplo@gmail.com"required>
-                    <label name="mensaje">Mensaje:</label> 
-                    <textarea name="mensaje" rows="5" cols="50" placeholder="Escribí tu mensaje aquí"required></textarea>
-                    <input type="submit" value="Enviar" class="enviar">
-                </fieldset>
-            </form>
-        </section>  
+        <section class="marco" id="marco">
+            <h2 id="productos"> Gabinetes de cocina</h2>
+
+            <div id="productos-container" class="row">  
+            </div>
+        </section>
+            
     </main>
     
     <footer>
@@ -80,5 +72,4 @@
     <script src="carrito.js"></script>
 </body>
 </html>
-    
 
