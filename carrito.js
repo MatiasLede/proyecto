@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const carritoContainer = document.getElementById("carrito-container"); 
     const totalElement = document.getElementById("total"); 
     
+
+    
+
+
+
     function cargarCarrito() { 
         let cart = JSON.parse(localStorage.getItem("cart")) || []; 
         carritoContainer.innerHTML = ""; 
@@ -12,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
             productRow.innerHTML = ` 
                 <td>${product.title}</td> 
                 <td>$${product.price.toFixed(2)}</td> 
-                <td>1</td> <!-- Puedes ajustar la cantidad según sea necesario --> 
+                <td>1</td> 
                 <td><button class="btn btn-danger eliminar-producto" data-id="${product.id}">Eliminar</button></td>
                 <td>$${product.price.toFixed(2)}</td> <!-- Subtotal al final --> 
             `; 
@@ -31,7 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }); 
         });
     }
-    
+    //botón de volver a la seccion de productos/gabinetes
+    document.getElementById("volver-productos").addEventListener("click", ()=>{
+        window.location.href="productos1.html";
+    })
+
+    //botón de finalizar compra
     document.getElementById("finalizar-compra").addEventListener("click", () => { 
         alert("Compra finalizada. Total: $" + totalElement.textContent); 
         localStorage.removeItem("cart"); 

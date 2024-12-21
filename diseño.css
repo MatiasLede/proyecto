@@ -205,7 +205,30 @@ footer .redes p:hover{
     width: calc(33.333% - 40px); /*Ajusta el ancho para que entren tres en una fila */
 }
 
-
+/* --------------------------------- */ 
+/* --------------------------------- */ 
+/* CARRITO */ 
+/* --------------------------------- */ 
+/* --------------------------------- */ 
+.text-center{
+    text-align:center;
+}
+.text-end{
+    text-align:end;
+}
+.mb-3{
+    display: flex; 
+    justify-content: flex-end; 
+    margin-top: 10px; 
+    margin-right:20px;
+}
+#volver-productos{
+    border: none; 
+    padding: 10px 20px; 
+    color: white; 
+    cursor: pointer; 
+    border-radius: 10px;
+}
 
 /* Estilos para la tabla */ 
 .table-container { 
@@ -213,9 +236,11 @@ footer .redes p:hover{
     justify-content: center; /* Centra la tabla horizontalmente */ 
     width: 100%; 
     
+    
 } 
 
 .table { 
+    
     width: 90%; /* Ajusta el ancho de la tabla al 90% de la pantalla */
     margin-top: 20px; 
     background-color: #2e4d3a;
@@ -248,7 +273,7 @@ footer .redes p:hover{
     display: flex; 
     justify-content: flex-end; 
     margin-top: 10px; 
-    margin-right:10px;
+    margin-right:20px;
 }
 .btn-primary { 
     background-color: #173a5f; /* Botón azul oscuro */
@@ -372,6 +397,34 @@ fieldset .enviar:hover{
         align-self: flex-start;
      }
 }
+
+/* --------------------------------- */ 
+/* MEDIA QUERY CARRITO */ 
+/* --------------------------------- */ 
+@media (max-width: 768px) { 
+    .table { 
+        width: 90%; /* Mantenemos la tabla al 90% del contenedor */ 
+    } 
+    .table th, .table td { 
+        font-size: 12px; /* Reducimos el tamaño de fuente */ 
+        padding: 6px; 
+    } 
+    .text-end, .finalizar-compra { 
+        justify-content: center; /* Centramos botones en pantallas pequeñas */ 
+        margin-right: 0; /* Quitamos margen derecho en pantallas pequeñas */ 
+    } 
+    .btn-primary { 
+        width: 90%; /* Botones al 90% en pantallas pequeñas */ 
+        margin-top: 10px;  
+    }
+    .total h4 { 
+        text-align: center; /* Centramos el total */ 
+        margin-right: 10px; 
+        margin-top: 10px; 
+    } 
+}
+
+
 /* --------------------------------- */ 
 /* MEDIA QUERY CONTACTO */ 
 /* --------------------------------- */ 

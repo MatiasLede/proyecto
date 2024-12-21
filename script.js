@@ -78,4 +78,22 @@ document.addEventListener("DOMContentLoaded", () => {
     // Carga inicial de productos
     fetchProductos();
     
+    // Validación de datos para formulario de contacto 
+    const form = document.getElementById("contact-form"); 
+    const nombre = document.querySelector("input[name='nombre']"); 
+    const email = document.querySelector("input[name='email']"); 
+    const mensaje = document.querySelector("textarea[name='mensaje']"); 
+
+
+    form.addEventListener("submit", (event) => { 
+        event.preventDefault(); // Evita el envío del formulario para la verificación 
+        if (nombre.value.trim() === "" || email.value.trim() === "" || mensaje.value.trim() === "") { 
+            alert('Por favor, completa todos los campos del formulario.');
+            console.log("Por favor, completa todos los campos del formulario."); 
+        } else { 
+            console.log("Todos los campos están completos."); 
+            form.submit(); // Envía el formulario si todos los campos están completos 
+        } 
+    }); 
+
 });
